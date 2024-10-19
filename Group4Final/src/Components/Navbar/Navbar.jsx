@@ -20,7 +20,7 @@ const Navbar = () => {
     <>
       <div className="bg-black p-4 w-full flex justify-center items-center ">
         <p className="text-white font-inter text-2xl font-bold  ">
-        UrbanFeet
+          UrbanFeet
         </p>
       </div>
       <div className="flex justify-around items-center">
@@ -44,7 +44,7 @@ const Navbar = () => {
               />
             </svg>
             <p className=" font-inter text-base font-medium tracking-normal leading-none text-center mr-2">
-              Whish List
+              WishList
             </p>
           </div>
           <div

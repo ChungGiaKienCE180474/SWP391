@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={authUser ? <Main></Main> : <Login></Login>}
+            element={authUser ? <Login></Login> : <Main></Main>}
           ></Route>
 
           <Route
