@@ -1,4 +1,5 @@
 using API;
+using WebAPI.Utils.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,8 +29,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors(apiPolicy);
 
-app.UseHttpsRedirection();
+app.UseMiddleware<JWTAuthenticationMiddleware>();
 
+app.UseHttpsRedirection();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
