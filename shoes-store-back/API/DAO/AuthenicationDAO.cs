@@ -72,5 +72,21 @@ namespace API.DAO
             return profileDTO;
         }
 
+        public ChangePasswordDTO ChangePassword(ChangePasswordDTO changePassword)
+        {
+            var getAccount = db.accounts
+                               .FirstOrDefault(x => x.AccountID == changePassword.accountID && x.Password.Equals(changePassword.OldPassword));
+            if (getAccount == null) {
+
+                return null;
+            }
+            getAccount.Password = changePassword.NewPassword;
+            db.accounts.Update(getAccount);
+            db.SaveChanges();
+            var updateDTO = map.Map<ChangePasswordDTO>(getAccount);
+            updateDTO.NewPassword = getAccount.Password;
+            return updateDTO;
+        }
+
     }
 }

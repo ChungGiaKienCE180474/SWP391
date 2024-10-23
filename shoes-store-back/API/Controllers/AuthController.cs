@@ -55,5 +55,18 @@ namespace API.Controllers
             }
             return Ok(response);
         }
+
+        [HttpPut("change-password")]
+        public IActionResult ChangePassword([FromForm]ChangePasswordDTO changePasswordDTO)
+        {
+            var response = dao.ChangePassword(changePasswordDTO);
+            if (response == null)
+            {
+                return BadRequest(new { Message = "Old password is incorrect" });
+            }
+            return Ok(new {Message = "Success Please Login With New Password",
+                           AccountID = response.accountID,
+                           NewPassword = response.NewPassword});
+        }
     }
 }
