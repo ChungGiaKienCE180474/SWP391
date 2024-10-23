@@ -34,7 +34,7 @@ namespace API.DAO
                 return token;
             }
             catch (Exception ex) {
-                return null;
+                return ex.Message;
             }
             
         }
@@ -58,5 +58,19 @@ namespace API.DAO
 
             return resultDto;
         }
+
+
+        public ProfileDTO GetProfileByID(int accountID)
+        {
+            var getProfile = db.accounts
+                               .FirstOrDefault(x => x.AccountID == accountID);
+            if (getProfile == null) {
+                return null;
+            }
+            var profileDTO = map.Map<ProfileDTO>(getProfile);
+            profileDTO.BirthDay = getProfile.BirthDay.Value.ToString("dd-MM-yyyy");
+            return profileDTO;
+        }
+
     }
 }

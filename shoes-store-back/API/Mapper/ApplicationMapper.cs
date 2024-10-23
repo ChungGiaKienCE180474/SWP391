@@ -12,6 +12,7 @@ namespace API.Mapper
             CreateMap<RegisterDTO, Account>();
             
             CreateMap<Account, RegisterDTO>();
+            CreateMap<Account, ProfileDTO>();
         }
     }
 

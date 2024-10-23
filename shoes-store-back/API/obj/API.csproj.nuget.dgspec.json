@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\0 code\\zProject Tham Khao\\ShoesManagement-CGKien\\shoes-store-back\\API\\API.csproj": {}
+    "D:\\Code\\PRN231\\BE_Code_Thue\\SWP391\\shoes-store-back\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\0 code\\zProject Tham Khao\\ShoesManagement-CGKien\\shoes-store-back\\API\\API.csproj": {
+    "D:\\Code\\PRN231\\BE_Code_Thue\\SWP391\\shoes-store-back\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\0 code\\zProject Tham Khao\\ShoesManagement-CGKien\\shoes-store-back\\API\\API.csproj",
+        "projectUniqueName": "D:\\Code\\PRN231\\BE_Code_Thue\\SWP391\\shoes-store-back\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\0 code\\zProject Tham Khao\\ShoesManagement-CGKien\\shoes-store-back\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\0 code\\zProject Tham Khao\\ShoesManagement-CGKien\\shoes-store-back\\API\\obj\\",
+        "projectPath": "D:\\Code\\PRN231\\BE_Code_Thue\\SWP391\\shoes-store-back\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\khang\\.nuget\\packages\\",
+        "outputPath": "D:\\Code\\PRN231\\BE_Code_Thue\\SWP391\\shoes-store-back\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\khang\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

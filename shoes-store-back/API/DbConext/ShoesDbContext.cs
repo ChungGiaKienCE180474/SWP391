@@ -7,7 +7,7 @@ namespace API.DbConext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost,1433;Database=SE1803_SWP391_Group4;Integrated Security=True;Trust Server Certificate=True");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-IVP2BT1;Initial Catalog=BE_CODE_THUE;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
         }
 
         public DbSet<Account> accounts { get; set; }

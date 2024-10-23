@@ -27,15 +27,33 @@ namespace API.Controllers
         [HttpPost("Register")]
         public IActionResult Register([FromBody] RegisterDTO registerDTO)
         {
-            if (registerDTO == null || registerDTO.AccountEmail.Equals("string") || registerDTO.Password.Equals("string"))
+            try
             {
-                return BadRequest(new {Message = "Register Fail"});
+                if (registerDTO == null || registerDTO.AccountEmail.Equals("string") || registerDTO.Password.Equals("string"))
+                {
+                    return BadRequest(new { Message = "Register Fail" });
+                }
+                else
+                {
+                    var response = dao.Register(registerDTO);
+                    return Ok(response);
+                }
             }
-            else
+            catch (Exception ex) {
+
+                return StatusCode(500,new {Message = "Internal Server Error", Error = ex.Message});
+            }
+        }
+
+        [HttpGet("get-profile")]
+        public IActionResult GetProfileByID([FromQuery] int accountID)
+        {
+            var response = dao.GetProfileByID(accountID);
+            if (response == null)
             {
-                var response = dao.Register(registerDTO);
-                return Ok(response);
+                return NotFound();
             }
+            return Ok(response);
         }
     }
 }
