@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "D:\\Code\\PRN231\\BE_Code_Thue\\SWP391\\shoes-store-back\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4BD8620-C8EB-4DB5-BACA-E2F8AC4E5A61}|API\\API.csproj|d:\\code\\prn231\\be_code_thue\\swp391\\shoes-store-back\\api\\dao\\authenicationdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4BD8620-C8EB-4DB5-BACA-E2F8AC4E5A61}|API\\API.csproj|solutionrelative:api\\dao\\authenicationdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4BD8620-C8EB-4DB5-BACA-E2F8AC4E5A61}|API\\API.csproj|d:\\code\\prn231\\be_code_thue\\swp391\\shoes-store-back\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4BD8620-C8EB-4DB5-BACA-E2F8AC4E5A61}|API\\API.csproj|solutionrelative:api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B4BD8620-C8EB-4DB5-BACA-E2F8AC4E5A61}|API\\API.csproj|d:\\code\\prn231\\be_code_thue\\swp391\\shoes-store-back\\api\\dtos\\profiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4BD8620-C8EB-4DB5-BACA-E2F8AC4E5A61}|API\\API.csproj|solutionrelative:api\\dtos\\profiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,6 +13,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{B4BD8620-C8EB-4DB5-BACA-E2F8AC4E5A61}|API\\API.csproj|d:\\code\\prn231\\be_code_thue\\swp391\\shoes-store-back\\api\\dtos\\changepassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4BD8620-C8EB-4DB5-BACA-E2F8AC4E5A61}|API\\API.csproj|solutionrelative:api\\dtos\\changepassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4BD8620-C8EB-4DB5-BACA-E2F8AC4E5A61}|API\\API.csproj|d:\\code\\prn231\\be_code_thue\\swp391\\shoes-store-back\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4BD8620-C8EB-4DB5-BACA-E2F8AC4E5A61}|API\\API.csproj|solutionrelative:api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4BD8620-C8EB-4DB5-BACA-E2F8AC4E5A61}|API\\API.csproj|d:\\code\\prn231\\be_code_thue\\swp391\\shoes-store-back\\api\\dao\\authenicationdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4BD8620-C8EB-4DB5-BACA-E2F8AC4E5A61}|API\\API.csproj|solutionrelative:api\\dao\\authenicationdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4BD8620-C8EB-4DB5-BACA-E2F8AC4E5A61}|API\\API.csproj|d:\\code\\prn231\\be_code_thue\\swp391\\shoes-store-back\\api\\mapper\\applicationmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 66,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,20 +74,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "ChangePasswordDTO.cs",
               "DocumentMoniker": "D:\\Code\\PRN231\\BE_Code_Thue\\SWP391\\shoes-store-back\\API\\DTOs\\ChangePasswordDTO.cs",
               "RelativeDocumentMoniker": "API\\DTOs\\ChangePasswordDTO.cs",
               "ToolTip": "D:\\Code\\PRN231\\BE_Code_Thue\\SWP391\\shoes-store-back\\API\\DTOs\\ChangePasswordDTO.cs",
               "RelativeToolTip": "API\\DTOs\\ChangePasswordDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T13:59:33.245Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Account.cs",
               "DocumentMoniker": "D:\\Code\\PRN231\\BE_Code_Thue\\SWP391\\shoes-store-back\\API\\Models\\Account.cs",
               "RelativeDocumentMoniker": "API\\Models\\Account.cs",
@@ -100,33 +100,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ProfileDTO.cs",
               "DocumentMoniker": "D:\\Code\\PRN231\\BE_Code_Thue\\SWP391\\shoes-store-back\\API\\DTOs\\ProfileDTO.cs",
               "RelativeDocumentMoniker": "API\\DTOs\\ProfileDTO.cs",
               "ToolTip": "D:\\Code\\PRN231\\BE_Code_Thue\\SWP391\\shoes-store-back\\API\\DTOs\\ProfileDTO.cs",
               "RelativeToolTip": "API\\DTOs\\ProfileDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T13:41:28.338Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\Code\\PRN231\\BE_Code_Thue\\SWP391\\shoes-store-back\\API\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Code\\PRN231\\BE_Code_Thue\\SWP391\\shoes-store-back\\API\\Controllers\\AuthController.cs*",
-              "RelativeToolTip": "API\\Controllers\\AuthController.cs*",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAwEQAAAA0AAAAAAAAAA==",
+              "ToolTip": "D:\\Code\\PRN231\\BE_Code_Thue\\SWP391\\shoes-store-back\\API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAvwEYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T13:37:38.23Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "AuthenicationDAO.cs",
               "DocumentMoniker": "D:\\Code\\PRN231\\BE_Code_Thue\\SWP391\\shoes-store-back\\API\\DAO\\AuthenicationDAO.cs",
               "RelativeDocumentMoniker": "API\\DAO\\AuthenicationDAO.cs",
