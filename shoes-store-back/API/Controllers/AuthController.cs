@@ -1,5 +1,6 @@
 ﻿using API.DAO;
 using API.DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -27,24 +28,10 @@ namespace API.Controllers
         [HttpPost("Register")]
         public IActionResult Register([FromBody] RegisterDTO registerDTO)
         {
-            try
-            {
-                if (registerDTO == null || registerDTO.AccountEmail.Equals("string") || registerDTO.Password.Equals("string"))
-                {
-                    return BadRequest(new { Message = "Register Fail" });
-                }
-                else
-                {
-                    var response = dao.Register(registerDTO);
-                    return Ok(response);
-                }
-            }
-            catch (Exception ex) {
-
-                return StatusCode(500,new {Message = "Internal Server Error", Error = ex.Message});
-            }
+            var response = dao.Register(registerDTO);
+            return StatusCode(response.StatusCode, response);
         }
-
+        
         [HttpGet("get-profile")]
         public IActionResult GetProfileByID([FromQuery] int accountID)
         {
@@ -67,6 +54,14 @@ namespace API.Controllers
             return Ok(new {Message = "Success Please Login With New Password",
                            AccountID = response.accountID,
                            NewPassword = response.NewPassword});
+        }
+        
+
+        [HttpPut("update-profile")]
+        public IActionResult UpdateProfile([FromForm]int id, [FromForm] ProfileDTO profileDTO)
+        {
+            var response = dao.UpdateProfile(id, profileDTO);
+            return StatusCode(response.StatusCode, response);
         }
     }
 }

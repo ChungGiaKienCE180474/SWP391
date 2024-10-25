@@ -3,6 +3,7 @@ using API.DTOs;
 using API.Models;
 using API.Utils;
 using AutoMapper;
+using System.Net;
 
 namespace API.DAO
 {
@@ -39,11 +40,21 @@ namespace API.DAO
             
         }
 
-        public RegisterDTO Register(RegisterDTO register)
+        public ResponseMessage Register(RegisterDTO register)
         {
             if (string.IsNullOrWhiteSpace(register.AccountEmail) || string.IsNullOrWhiteSpace(register.Password))
             {
                 return null;
+            }
+            var checkAlreadyEmail = db.accounts
+                                      .FirstOrDefault(x => x.AccountEmail.Equals(register.AccountEmail));
+            if (checkAlreadyEmail != null)
+            {
+                return new ResponseMessage { Success = false, 
+                                             Message = "Email Already Exist", 
+                                             Data = checkAlreadyEmail.AccountEmail, 
+                                             StatusCode = (int)HttpStatusCode.AlreadyReported 
+                                            };
             }
             Account registerAccount = new Account
             {
@@ -56,7 +67,13 @@ namespace API.DAO
             db.SaveChanges();
             var resultDto = map.Map<RegisterDTO>(registerAccount);
 
-            return resultDto;
+            return new ResponseMessage
+            {
+                Success = false,
+                Message = "Register Successfully",
+                Data = resultDto,
+                StatusCode = (int)HttpStatusCode.OK
+            };
         }
 
 
@@ -86,6 +103,36 @@ namespace API.DAO
             var updateDTO = map.Map<ChangePasswordDTO>(getAccount);
             updateDTO.NewPassword = getAccount.Password;
             return updateDTO;
+        }
+
+        public ResponseMessage UpdateProfile(int id,ProfileDTO profileDTO )
+        {
+            var getUser = db.accounts.FirstOrDefault( x => x.AccountID == id);
+            if (getUser != null)
+            {
+                getUser.AccountAddress = profileDTO.AccountAddress;
+                getUser.AccountName = profileDTO.AccountName;
+                getUser.BirthDay =DateTime.Parse(profileDTO.BirthDay);
+                getUser.Gender = profileDTO.Gender;
+                getUser.Phone = profileDTO.Phone;
+                getUser.AccountAddress = profileDTO.AccountAddress;
+                db.accounts.Update(getUser);
+                db.SaveChanges();
+                return new ResponseMessage
+                {
+                    Success = true,
+                    Message = "Update Successfully",
+                    Data = map.Map<ProfileDTO>(getUser),
+                    StatusCode = (int)HttpStatusCode.OK,
+                };
+            }
+            return new ResponseMessage
+            {
+                Success = false,
+                Message = "Account Not Found",
+                Data = new int[0],
+                StatusCode = (int)HttpStatusCode.NotFound,
+            };
         }
 
     }
